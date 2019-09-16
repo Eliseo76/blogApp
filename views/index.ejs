@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BLOGS</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<h1>BLOG PAGE</h1>
+<p>Welcome to the BLOG PAGE</p>
+
+<%blogs.forEach(function(blog){ %>
+<div>
+
+    <h2><%= blog.title %> </h2>
+    <img src="<%= blog.image %>">
+    <span><%= blog.created %></span>
+    <p><%= blog.body %></p>
+
+</div>
+
+<% }) %>
+</body>
+</html>

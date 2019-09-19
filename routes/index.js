@@ -37,7 +37,25 @@ router.get('/blogs', (req, res) => {
     })
 });
 
+//NEW ROUTE
 
+router.get('/blogs/new', (req, res) => {
+    res.render('new')
+});
+
+//CREATE ROUTE
+
+
+router.post('/blogs', function (req, res) {
+    Blog.create(req.body.blog, function (err, newBlog) {
+        if (err) {
+            res.render('new');
+            console.log(err);
+        } else {
+            res.redirect('/blogs');
+        }
+    })
+});
 
 
 

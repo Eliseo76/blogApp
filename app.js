@@ -50,6 +50,6 @@ app.use(function(err, req, res, next) {
 
 module.exports = app;
 
-app.listen(3000, process.env.ID, ()=>{
+app.listen(7070, process.env.ID, () => {
   console.log('SERVER HAS STARTED')
 });
